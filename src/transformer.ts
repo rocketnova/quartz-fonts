@@ -16,8 +16,8 @@ const defaultOptions: FontsOptions = {
 };
 
 function toFontFamily(spec: FontSpecification): string {
-  if (typeof spec === "string") return spec;
-  return spec.name;
+  if (typeof spec === "string") return `"${spec}"`;
+  return `"${spec.name}"`;
 }
 
 interface ResolvedFonts {
